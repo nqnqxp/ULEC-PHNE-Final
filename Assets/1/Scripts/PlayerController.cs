@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpHeight = 2f;
+    public float jumpHeight = 0f;
 
     private float gravity = -9.81f;
     public Transform cameraTransform; 
@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
         isGrounded = controller.isGrounded;
 
         if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
+        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");

@@ -1,3 +1,3 @@
-NPC: Hi!
+Object: Hi!
 Player: Hello. How are you?
-NPC: Good.
+Object: Memory

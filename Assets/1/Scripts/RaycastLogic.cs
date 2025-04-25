@@ -3,52 +3,61 @@ using UnityEngine;
 
 public class RaycastLogic : MonoBehaviour
 {
+    public float rayDistance = 10f;
+    public LayerMask interactableLayer;
     public Camera playerCamera;
-    public float interactionDistance = 3f;
     public Canvas interactionCanvas;
-    public TextMeshProUGUI interactionText;
-    public InteractionDisplay currentInteraction;
+    public Canvas dialogueCanvas;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private GameObject currentTarget;
+    private bool canInteract = false;
+    private string interactionText;
+
+    private void Start()
     {
-        interactionCanvas.enabled = false;
+        interactionCanvas.gameObject.SetActive(false);
+        dialogueCanvas.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;
 
-
-        if (Physics.Raycast(ray, out hit, interactionDistance))
+        if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer))
         {
-            InteractionDisplay interactableObject = hit.collider.GetComponent<InteractionDisplay>();
+            currentTarget = hit.collider.gameObject; interactionCanvas.gameObject.SetActive(true);
 
-            if (interactableObject != null && interactableObject != currentInteraction)
+            canInteract = true;
+
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                currentInteraction = interactableObject;
-                interactionCanvas.enabled = true;
-                interactionText.text = currentInteraction.GetInteractionText();
-                interactableObject.objectNameDisplay.text = interactableObject.objectNameText;
-                interactableObject.objectDescriptionDisplay.text = interactableObject.objectDescriptionText;
+                StartDialogue(currentTarget);
+            }
+
+            if (hit.collider.CompareTag("NPC"))
+            {
+                interactionText = "Talk";
+            }
+            else if (hit.collider.CompareTag("Object"))
+            {
+                interactionText = "Use Psychometry";
             }
         }
-
         else
         {
-            if (currentInteraction != null)
-            {
-                currentInteraction.DisableDescription();
-                currentInteraction = null;
-            }
-            interactionCanvas.enabled = false;
+            interactionCanvas.gameObject.SetActive(false);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.E) && currentInteraction != null)
-        {
-            currentInteraction.Interact();
-        }
+    void StartDialogue(GameObject target)
+    {
+        AssignInk inkTarget = target.GetComponent<AssignInk>();
+
+        DialogueManager.instance.StartDialogue(inkTarget.inkJSON);
+        interactionCanvas.gameObject.SetActive(false );
+
+        target.layer = LayerMask.NameToLayer("Default");
+
     }
 }
