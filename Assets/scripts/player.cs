@@ -12,6 +12,8 @@ public class player : MonoBehaviour
 
 	void Start()
 	{
+		Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 	    animator = gameObject.GetComponent<Animator>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
 	}
