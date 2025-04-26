@@ -9,6 +9,7 @@ public class RaycastLogic : MonoBehaviour
     public Camera playerCamera;
     public Canvas interactionCanvas;
     public Canvas dialogueCanvas;
+    public Canvas blueprintCanvas;
     public TextMeshProUGUI interactionTextObject;
 
     private GameObject currentTarget;
@@ -27,6 +28,7 @@ public class RaycastLogic : MonoBehaviour
     {
         interactionCanvas.gameObject.SetActive(false);
         dialogueCanvas.gameObject.SetActive(false);
+        blueprintCanvas.gameObject.SetActive(false);
 
         OGMoveSpeed = playerController.moveSpeed;
     }
@@ -56,15 +58,23 @@ public class RaycastLogic : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 StartDialogue(currentTarget);
+                if (hit.collider.CompareTag("Blueprint"))
+                {
+                blueprintCanvas.gameObject.SetActive(true);
+                }
             }
 
             if (hit.collider.CompareTag("NPC"))
             {
                 interactionText = "Talk";
             }
-            else if (hit.collider.CompareTag("Object"))
+            else if (hit.collider.CompareTag("Psychometry"))
             {
                 interactionText = "Use Psychometry";
+            }
+            else if (hit.collider.CompareTag("Read") || hit.collider.CompareTag("Blueprint"))
+            {
+                interactionText = "Read";
             }
         }
         else

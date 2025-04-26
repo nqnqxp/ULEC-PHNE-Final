@@ -6,7 +6,9 @@ TagManager:
   tags:
   - CinemachineTarget
   - NPC
-  - Object
+  - Psychometry
+  - Read
+  - Blueprint
   layers:
   - Default
   - TransparentFX
