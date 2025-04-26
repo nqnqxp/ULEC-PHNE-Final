@@ -1,3 +1,1 @@
-Object: Hi!
-Object: Memory!
-Object: Bye!
+Blueprint of Giant Mega Robot: 
