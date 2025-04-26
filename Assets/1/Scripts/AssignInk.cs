@@ -5,4 +5,5 @@ using UnityEngine;
 public class AssignInk : MonoBehaviour
 {
     public TextAsset inkJSON;
+    public bool hasTalked = false;
 }

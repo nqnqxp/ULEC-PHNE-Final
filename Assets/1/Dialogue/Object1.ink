@@ -1,3 +1,3 @@
 Object: Hi!
-Player: Hello. How are you?
-Object: Memory
+Object: Memory!
+Object: Bye!
