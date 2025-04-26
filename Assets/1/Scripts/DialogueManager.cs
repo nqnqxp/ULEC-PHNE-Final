@@ -11,7 +11,8 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
 
     public TextAsset currentInk;
-    public GameObject dialogueCanvas;
+    public Canvas dialogueCanvas;
+    public Canvas blueprintCanvas;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI dialogueNameText;
     public GameObject choicesObject;
@@ -93,7 +94,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         isDialoguePlaying = true;
-        dialogueCanvas.SetActive(true);
+        dialogueCanvas.gameObject.SetActive(true);
         ContinueStory();
     }
 
@@ -177,6 +178,7 @@ public class DialogueManager : MonoBehaviour
 
         isDialoguePlaying = false;
         dialogueCanvas.gameObject.SetActive(false);
+        blueprintCanvas.gameObject.SetActive(false);
 
         CharacterSpriteManager.instance.ChangeSprite("idle");
 
