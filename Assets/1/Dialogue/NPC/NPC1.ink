@@ -11,11 +11,11 @@ VAR hasTalked = false
 }
 
 === first ===
-NPC: Go away!
-Player: No!
-NPC: I hate you!
+NPC: Hi!
+Player: Hello. How are you?
+NPC: Good.
 -> END
 
 === last ===
-NPC: I never want to see you again!
+NPC: Go over there
 -> END
