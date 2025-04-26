@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine.UIElements;
+using UnityEngine.SearchService;
+using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
@@ -101,11 +103,25 @@ public class DialogueManager : MonoBehaviour
         {
             string nextline = story.Continue();
 
+            HandleTags(story.currentTags);
             DisplayLine(nextline);
         }
         else
         {
             EndDialogue();
+        }
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+          CharacterSpriteManager.instance.ChangeSprite(tagValue);
         }
     }
 
@@ -161,6 +177,9 @@ public class DialogueManager : MonoBehaviour
 
         isDialoguePlaying = false;
         dialogueCanvas.gameObject.SetActive(false);
+
+        CharacterSpriteManager.instance.ChangeSprite("idle");
+
         dialogueText.text = "";
         dialogueNameText.text = "";
     }
