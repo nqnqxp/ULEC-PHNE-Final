@@ -1,4 +1,5 @@
 using TMPro;
+using System;
 using UnityEngine;
 
 public class RaycastLogic : MonoBehaviour
@@ -8,27 +9,49 @@ public class RaycastLogic : MonoBehaviour
     public Camera playerCamera;
     public Canvas interactionCanvas;
     public Canvas dialogueCanvas;
+    public TextMeshProUGUI interactionTextObject;
 
     private GameObject currentTarget;
-    private bool canInteract = false;
     private string interactionText;
+    private float OGMoveSpeed;
+    private PlayerController playerController;
+    private DialogueManager dialogueManager;
+
+    private void Awake()
+    {
+        playerController = GetComponent<PlayerController>();
+        dialogueManager = GetComponent<DialogueManager>();
+    }
 
     private void Start()
     {
         interactionCanvas.gameObject.SetActive(false);
         dialogueCanvas.gameObject.SetActive(false);
+
+        OGMoveSpeed = playerController.moveSpeed;
     }
 
     private void Update()
     {
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if (dialogueManager.isDialoguePlaying)
+        {
+            interactionCanvas.gameObject.SetActive(false);
+            playerController.moveSpeed = 0;
+            return;
+        }
+        else
+        {
+            playerController.moveSpeed = OGMoveSpeed;
+        }
+
+            Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer))
         {
-            currentTarget = hit.collider.gameObject; interactionCanvas.gameObject.SetActive(true);
+            interactionTextObject.text = interactionText;
 
-            canInteract = true;
+            currentTarget = hit.collider.gameObject; interactionCanvas.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -54,10 +77,7 @@ public class RaycastLogic : MonoBehaviour
     {
         AssignInk inkTarget = target.GetComponent<AssignInk>();
 
-        DialogueManager.instance.StartDialogue(inkTarget.inkJSON);
+        DialogueManager.instance.StartDialogue(inkTarget.inkJSON, inkTarget);
         interactionCanvas.gameObject.SetActive(false );
-
-        target.layer = LayerMask.NameToLayer("Default");
-
     }
 }
