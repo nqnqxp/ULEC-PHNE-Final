@@ -18,7 +18,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject choicesObject;
 
     [Header("Choices")]
-    public TextMeshProUGUI dialogueTextObject;
     public TextMeshProUGUI choice1Text;
     public TextMeshProUGUI choice2Text;
     public GameObject choice1Panel;
