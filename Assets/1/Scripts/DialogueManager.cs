@@ -109,6 +109,11 @@ public class DialogueManager : MonoBehaviour
             story.variablesState["hasTalked"] = assignInk.hasTalked;
         }
 
+        if (story.variablesState.GlobalVariableExistsWithName("staySilent"))
+        {
+            story.variablesState["staySilent"] = assignInk.staySilent;
+        }
+
         isDialoguePlaying = true;
         dialogueCanvas.gameObject.SetActive(true);
         ContinueStory();
@@ -190,6 +195,10 @@ public class DialogueManager : MonoBehaviour
         if (story.variablesState["hasTalked"] != null && currentAssignInk != null)
         {
             currentAssignInk.hasTalked = (bool)story.variablesState["hasTalked"];
+        }
+        if (story.variablesState["staySilent"] != null && currentAssignInk != null)
+        {
+            currentAssignInk.staySilent = (bool)story.variablesState["staySilent"];
         }
 
         isDialoguePlaying = false;

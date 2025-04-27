@@ -321,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 109c1f2a83036d64b82e55ab24d1126a, type: 3}
   hasTalked: 0
+  staySilent: 0
 --- !u!212 &108709715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -682,6 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 105398f666b1648a3aec57d4f7ae486e, type: 3}
   hasTalked: 0
+  staySilent: 0
 --- !u!65 &338482133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -996,6 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 9d4b9f2750d4c8342bcb4233984ac243, type: 3}
   hasTalked: 0
+  staySilent: 0
 --- !u!65 &788793475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1379,6 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 30ae51ec5096455459e52397ef04755d, type: 3}
   hasTalked: 0
+  staySilent: 0
 --- !u!65 &925707004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1994,6 +1998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 23a44c2d707c0e642ab2e8bf6a0509a2, type: 3}
   hasTalked: 0
+  staySilent: 0
 --- !u!65 &1491391066
 BoxCollider:
   m_ObjectHideFlags: 0
