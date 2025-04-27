@@ -46,15 +46,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (isDialoguePlaying)
         {
-            if (story.canContinue && Input.GetKeyDown(KeyCode.Space))
-            {
-                ContinueStory();
-            }
-            else if (!story.canContinue && Input.GetKeyDown(KeyCode.Space))
-            {
-                EndDialogue();
-            }
-            else if (story.currentChoices.Count > 0)
+            if (story.currentChoices.Count > 0)
             {
                 if (Input.GetKeyDown(KeyCode.W))
                 {
@@ -77,6 +69,17 @@ public class DialogueManager : MonoBehaviour
                     currentChoiceIndex = 0;
                     choice1Panel.SetActive(true);
                     choice2Panel.SetActive(false);
+                }
+            }
+            else
+            {
+                if (story.canContinue && Input.GetKeyDown(KeyCode.Space))
+                {
+                    ContinueStory();
+                }
+                else if (!story.canContinue && Input.GetKeyDown(KeyCode.Space))
+                {
+                    EndDialogue();
                 }
             }
         }

@@ -1,6 +1,7 @@
 using TMPro;
 using System;
 using UnityEngine;
+using StarterAssets;
 
 public class RaycastLogic : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class RaycastLogic : MonoBehaviour
     private GameObject currentTarget;
     private string interactionText;
     private float OGMoveSpeed;
-    private PlayerController playerController;
+    private FirstPersonController playerController;
     private DialogueManager dialogueManager;
 
     private void Awake()
     {
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<FirstPersonController>();
         dialogueManager = GetComponent<DialogueManager>();
     }
 
@@ -30,7 +31,7 @@ public class RaycastLogic : MonoBehaviour
         dialogueCanvas.gameObject.SetActive(false);
         blueprintCanvas.gameObject.SetActive(false);
 
-        OGMoveSpeed = playerController.moveSpeed;
+        OGMoveSpeed = playerController.MoveSpeed;
     }
 
     private void Update()
@@ -38,12 +39,12 @@ public class RaycastLogic : MonoBehaviour
         if (dialogueManager.isDialoguePlaying)
         {
             interactionCanvas.gameObject.SetActive(false);
-            playerController.moveSpeed = 0;
+            playerController.MoveSpeed = 0;
             return;
         }
         else
         {
-            playerController.moveSpeed = OGMoveSpeed;
+            playerController.MoveSpeed = OGMoveSpeed;
         }
 
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
