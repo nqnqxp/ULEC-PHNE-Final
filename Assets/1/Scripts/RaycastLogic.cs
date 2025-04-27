@@ -2,6 +2,7 @@ using TMPro;
 using System;
 using UnityEngine;
 using StarterAssets;
+using System.Collections;
 
 public class RaycastLogic : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class RaycastLogic : MonoBehaviour
     private GameObject currentTarget;
     private string interactionText;
     private float OGMoveSpeed;
+    private bool justFinishedDialogue = false;
     private FirstPersonController playerController;
     private DialogueManager dialogueManager;
 
@@ -40,11 +42,13 @@ public class RaycastLogic : MonoBehaviour
         {
             interactionCanvas.gameObject.SetActive(false);
             playerController.MoveSpeed = 0;
+            playerController._input.jump = false;
             return;
         }
-        else
+
+        if (justFinishedDialogue)
         {
-            playerController.MoveSpeed = OGMoveSpeed;
+            return;
         }
 
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
@@ -90,5 +94,21 @@ public class RaycastLogic : MonoBehaviour
 
         DialogueManager.instance.StartDialogue(inkTarget.inkJSON, inkTarget);
         interactionCanvas.gameObject.SetActive(false );
+    }
+    public void SetJustFinishedDialogue()
+    {
+        justFinishedDialogue = true;
+
+        playerController._input.jump = false;
+        StartCoroutine(RestoreMovementAfterDelay());
+    }
+
+    private IEnumerator RestoreMovementAfterDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        playerController.MoveSpeed = OGMoveSpeed;
+        playerController._input.jump = false;
+        justFinishedDialogue = false;
     }
 }
