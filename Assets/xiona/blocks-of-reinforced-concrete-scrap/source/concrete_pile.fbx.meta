@@ -3,7 +3,27 @@ guid: 459522a16ff784c92a11bd26965d0a88
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_pile_u1_v1
+    second: {fileID: 2100000, guid: a7a00279b8d3f43cea56066a9057536c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_pile_u1_v2
+    second: {fileID: 2100000, guid: 045d839c806594dedb0cfe852c9169d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_pile_u2_v1
+    second: {fileID: 2100000, guid: f49f73bcc809a453cb1668bdd2e5e45d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_pile_u2_v2
+    second: {fileID: 2100000, guid: c3cd78c6a18934e5ba8d22f8807cbb41, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
