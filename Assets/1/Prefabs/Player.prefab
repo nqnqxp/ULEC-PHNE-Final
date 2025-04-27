@@ -122,7 +122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: JumpHeight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
@@ -184,30 +184,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 7761580812840032472}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7761580812170010493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027238308677910156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7649596c9176c1b43a7d6e0ab04abf01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentInk: {fileID: 0}
-  dialogueCanvas: {fileID: 0}
-  blueprintCanvas: {fileID: 0}
-  dialogueText: {fileID: 0}
-  dialogueNameText: {fileID: 0}
-  choicesObject: {fileID: 0}
-  dialogueTextObject: {fileID: 0}
-  choice1Text: {fileID: 0}
-  choice2Text: {fileID: 0}
-  choice1Panel: {fileID: 0}
-  choice2Panel: {fileID: 0}
-  isDialoguePlaying: 0
 --- !u!114 &7761580812170010492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +205,29 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   blueprintCanvas: {fileID: 0}
   interactionTextObject: {fileID: 0}
+--- !u!114 &7761580812170010493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027238308677910156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7649596c9176c1b43a7d6e0ab04abf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInk: {fileID: 0}
+  dialogueCanvas: {fileID: 0}
+  blueprintCanvas: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueNameText: {fileID: 0}
+  choicesObject: {fileID: 0}
+  choice1Text: {fileID: 0}
+  choice2Text: {fileID: 0}
+  choice1Panel: {fileID: 0}
+  choice2Panel: {fileID: 0}
+  isDialoguePlaying: 0
 --- !u!4 &5968441267514410960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
