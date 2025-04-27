@@ -201,6 +201,8 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         dialogueNameText.text = "";
 
+        FindObjectOfType<RaycastLogic>().SetJustFinishedDialogue();
+
         if (triggeredObject != null)
         {
             triggeredObject.SetActive(false);
