@@ -84,7 +84,7 @@ public class RaycastLogic : MonoBehaviour
         }
     }
 
-    void StartDialogue(GameObject target)
+    public void StartDialogue(GameObject target)
     {
         AssignInk inkTarget = target.GetComponent<AssignInk>();
 

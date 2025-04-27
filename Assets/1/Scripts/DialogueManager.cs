@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     private Story story;
     public bool isDialoguePlaying;
     private AssignInk currentAssignInk;
+    private RaycastLogic raycastLogic;
+    private GameObject triggeredObject;
 
     private int currentChoiceIndex = 0;
 
@@ -39,6 +41,8 @@ public class DialogueManager : MonoBehaviour
         {
             instance = this;
         }
+
+        raycastLogic = GetComponent<RaycastLogic>();
     }
 
     private void Update()
@@ -81,6 +85,16 @@ public class DialogueManager : MonoBehaviour
                     EndDialogue();
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TriggerDialogue"))
+        {
+            raycastLogic.StartDialogue(other.gameObject);
+
+            triggeredObject = other.gameObject;
         }
     }
 
@@ -186,6 +200,11 @@ public class DialogueManager : MonoBehaviour
 
         dialogueText.text = "";
         dialogueNameText.text = "";
+
+        if (triggeredObject != null)
+        {
+            triggeredObject.SetActive(false);
+        }
     }
 }
 

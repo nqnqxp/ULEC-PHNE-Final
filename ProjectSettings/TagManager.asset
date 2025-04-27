@@ -9,6 +9,7 @@ TagManager:
   - Psychometry
   - Read
   - Blueprint
+  - TriggerDialogue
   layers:
   - Default
   - TransparentFX
