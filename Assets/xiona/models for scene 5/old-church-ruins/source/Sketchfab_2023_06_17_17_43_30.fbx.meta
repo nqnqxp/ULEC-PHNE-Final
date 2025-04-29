@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 449a14bd5f6b84d3e83ff866410e3663
+guid: cf6835560de0147a2bbafed13faedb2d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,33 +7,83 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 22ff226d-422c-4f8c-9be5-9788efc9155c
-    second: {fileID: 2100000, guid: b8b29e754b0284ab0b56162b6a142db3, type: 2}
+      name: ARCH SHORT
+    second: {fileID: 2100000, guid: 4de26e70839d640dca63ca6d3f21cb53, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 4b3714fc-8614-42c3-b0db-3ef6ca06fd0b
-    second: {fileID: 2100000, guid: 72f028a3ce319478ca4908a96f1a102e, type: 2}
+      name: FACADE
+    second: {fileID: 2100000, guid: 4ff0e5371a2e9495a9dc4f173082437f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 57129778-8f2b-4378-8853-e23309d4c1dc
-    second: {fileID: 2100000, guid: 37efc9276edb24a149ab3f23e50151a9, type: 2}
+      name: GATE
+    second: {fileID: 2100000, guid: 3a8a24ff1dff04a04b93f3d936257fec, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 711ef8bf8f0430c2
-    second: {fileID: 2800000, guid: 169a061caa7ea4bb48cc6ab33e4758aa, type: 3}
+      name: LONE_STONE_01
+    second: {fileID: 2100000, guid: 63a0df2e8302d46c8b8372146f402378, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: da87daafb3c08d1d
-    second: {fileID: 2800000, guid: 715b11fab4df241de90691016325c0d3, type: 3}
+      name: LONE_STONE_02
+    second: {fileID: 2100000, guid: decdc8636f6c84f99a93667a44c08981, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: f73025d4f8ced6f3
-    second: {fileID: 2800000, guid: 9dd494459e52541538ddeb2909aa2930, type: 3}
+      name: LONG_ARCH
+    second: {fileID: 2100000, guid: 8d0d488c3a020450b970ee8a1b6b175b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PILLAR_01
+    second: {fileID: 2100000, guid: bdcff2f33644e4820a8c4cdabf014c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PILLAR_02
+    second: {fileID: 2100000, guid: 4ebcc344184c741a1b71d29254a3806b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUINED WALL STONES
+    second: {fileID: 2100000, guid: 0f5598946e8de4fafbf6412cffe8d348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUINED_PAVEMENT
+    second: {fileID: 2100000, guid: 194d4fce774504e5196d6ebf6a777d44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUINED_PAVEMENT_02
+    second: {fileID: 2100000, guid: d7b6c78f669fb43ae817033dc2e9f201, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUINED_WALL
+    second: {fileID: 2100000, guid: 6b12b06d4eade489b8e27c4862300806, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SIDE_ARCH
+    second: {fileID: 2100000, guid: db093b668c79d499daed69a1291b7a69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SMALL RUINED WALL
+    second: {fileID: 2100000, guid: 347a73968fec94728ad63e32b4452372, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SMALL RUINED WALL STONES
+    second: {fileID: 2100000, guid: 0d544d49574354b4988f0b8c17124a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TOWER_FACADE
+    second: {fileID: 2100000, guid: 2a007387afd2a43ecaea52575022b1ab, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
