@@ -1751,6 +1751,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2837884864354566276, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837884864731788360, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2837884865448718966, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1797,6 +1805,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2837884865448718967, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837884865507836793, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
