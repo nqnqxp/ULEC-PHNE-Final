@@ -54,7 +54,7 @@ public class RaycastLogic : MonoBehaviour
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer))
+        if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer, QueryTriggerInteraction.Ignore))
         {
             interactionTextObject.text = interactionText;
 
