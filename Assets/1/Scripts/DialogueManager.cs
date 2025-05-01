@@ -102,14 +102,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("CollisionDialogue"))
-    //    {
-    //        raycastLogic.StartDialogue(collision.gameObject);
-    //    }
-    //}
-
     public void StartDialogue (TextAsset inkJSON, AssignInk assignInk)
     {
         currentInk = inkJSON;
