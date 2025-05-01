@@ -15,6 +15,7 @@ public class AudioSpatialManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        bgmAudio = GameObject.FindWithTag("bgmMusic").GetComponent<AudioSource>();
         targetOriginalVolume = bgmAudio.volume;
     }
 
