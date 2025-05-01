@@ -17,14 +17,7 @@ public class CharacterSpriteManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
+        instance = this;
 
         characterSprite = GetComponent<SpriteRenderer>();
 

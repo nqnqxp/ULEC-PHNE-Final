@@ -96,7 +96,19 @@ public class DialogueManager : MonoBehaviour
 
             triggeredObject = other.gameObject;
         }
+        else if (other.CompareTag("CollisionDialogue"))
+        {
+            raycastLogic.StartDialogue(other.gameObject);
+        }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("CollisionDialogue"))
+    //    {
+    //        raycastLogic.StartDialogue(collision.gameObject);
+    //    }
+    //}
 
     public void StartDialogue (TextAsset inkJSON, AssignInk assignInk)
     {
@@ -205,7 +217,10 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.gameObject.SetActive(false);
         blueprintCanvas.gameObject.SetActive(false);
 
-        CharacterSpriteManager.instance.ChangeSprite("idle");
+        if (CharacterSpriteManager.instance != null)
+        {
+            CharacterSpriteManager.instance.ChangeSprite("idle");
+        }
 
         dialogueText.text = "";
         dialogueNameText.text = "";
