@@ -12,6 +12,8 @@ public class CharacterSpriteManager : MonoBehaviour
     public Sprite oneSprite;
     public Sprite twoSprite;
     public Sprite threeSprite;
+    public Sprite fourSprite;
+    public Sprite fiveSprite;
 
     private float mirrorX;
 
@@ -52,6 +54,12 @@ public class CharacterSpriteManager : MonoBehaviour
                 break;
             case "three":
                 characterSprite.sprite = threeSprite;
+                break;
+            case "four":
+                characterSprite.sprite = fourSprite;
+                break;
+            case "five":
+                characterSprite.sprite = fiveSprite;
                 break;
         }
     }
