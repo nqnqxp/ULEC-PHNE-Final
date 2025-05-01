@@ -29,7 +29,6 @@ public class DialogueManager : MonoBehaviour
     private RaycastLogic raycastLogic;
     private GameObject triggeredObject;
     private GameObject endingObject;
-    public GameObject buttonObject;
 
     private int currentChoiceIndex = 0;
 
@@ -38,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject stayObject;
     public Canvas reviveCanvas;
     public Canvas stayCanvas;
+    public GameObject buttonObject;
 
     private void Awake()
     {
