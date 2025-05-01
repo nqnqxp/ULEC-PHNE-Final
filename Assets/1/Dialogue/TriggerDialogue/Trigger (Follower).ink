@@ -38,7 +38,7 @@ FIN1X:
 ??: Still, I do have the honor of showing you around and introducing you to our Shepherd~!
 
 FIN1X: Shepherd..? Must be the one in charge
-That would be great.
+FIN1X: That would be great.
 
 Follower of The Shepherd: Just keep going straight till you reach the arch, I’ll meet you there~!
 -> END

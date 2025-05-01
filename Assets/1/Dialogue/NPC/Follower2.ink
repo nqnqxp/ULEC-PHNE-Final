@@ -1,7 +1,7 @@
 VAR hasTalked = false
 Follower of The Shepherd: … 
-Follower of The Shepherd: …
-Follower of The Shepherd: …
+Follower of The Shepherd: ….
+Follower of The Shepherd: …..
 
 FIN1X: I should move along.
 ~hasTalked = true
