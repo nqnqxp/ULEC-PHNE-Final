@@ -11,7 +11,6 @@ VAR pressButton = false
     -> last
 }
 
-
 === first ===
 FIN1X: <i>Should I press the button or not?</i>
 
@@ -39,6 +38,7 @@ FIN1X:
 
 === revive ===
 Scientist's came back. Another nuclear war occured.
+
 -> END
 
 === stay ===
