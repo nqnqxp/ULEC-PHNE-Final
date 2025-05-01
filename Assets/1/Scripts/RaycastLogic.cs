@@ -81,6 +81,10 @@ public class RaycastLogic : MonoBehaviour
             {
                 interactionText = "Read";
             }
+            else if (hit.collider.CompareTag("Observe"))
+            {
+                interactionText = "Observe";
+            }
         }
         else
         {
