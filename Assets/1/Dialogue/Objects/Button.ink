@@ -15,19 +15,12 @@ VAR pressButton = false
 FIN1X: <i>Should I press the button or not?</i>
 
 FIN1X:
-* Press button
-    -> button
+* Press the button
+    ~pressButton = true
+    -> END
 * Don't press the button
-    -> no
-
-=== button ===
-~pressButton = true
--> END
-
-=== no ===
-~pressButton = false
--> END
-
+    ~pressButton = false
+    -> END
 
 === last ===
 {pressButton:
