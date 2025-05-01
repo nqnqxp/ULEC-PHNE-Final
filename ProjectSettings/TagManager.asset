@@ -12,6 +12,7 @@ TagManager:
   - CollisionDialogue
   - TriggerDialogue
   - Children
+  - bgmMusic
   layers:
   - Default
   - TransparentFX
