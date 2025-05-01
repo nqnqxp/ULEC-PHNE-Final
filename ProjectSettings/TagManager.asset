@@ -16,6 +16,7 @@ TagManager:
   - Observe
   - Interact
   - Button
+  - EndingTrigger
   layers:
   - Default
   - TransparentFX
