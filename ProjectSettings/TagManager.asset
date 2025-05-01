@@ -11,6 +11,7 @@ TagManager:
   - Blueprint
   - CollisionDialogue
   - TriggerDialogue
+  - Children
   - bgmMusic
   layers:
   - Default

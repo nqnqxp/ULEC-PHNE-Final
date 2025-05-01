@@ -51,7 +51,7 @@ public class RaycastLogic : MonoBehaviour
             return;
         }
 
-            Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer))
@@ -69,7 +69,7 @@ public class RaycastLogic : MonoBehaviour
                 }
             }
 
-            if (hit.collider.CompareTag("NPC"))
+            if (hit.collider.CompareTag("NPC") || hit.collider.CompareTag("Children"))
             {
                 interactionText = "Talk";
             }
@@ -87,6 +87,31 @@ public class RaycastLogic : MonoBehaviour
             interactionCanvas.gameObject.SetActive(false);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Children"))
+            {
+                Animator childrenAnimator = other.GetComponent<Animator>();
+                if (childrenAnimator != null)
+                {
+                    childrenAnimator.SetBool("Near", true);
+                }
+            }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Children"))
+        {
+            Animator childrenAnimator = other.GetComponent<Animator>();
+            if (childrenAnimator != null)
+            {
+                childrenAnimator.SetBool("Near", false);
+            }
+        }
+    }
+
 
     public void StartDialogue(GameObject target)
     {
