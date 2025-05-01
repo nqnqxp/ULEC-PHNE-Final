@@ -1,3 +1,7 @@
 Animals are thriving.
 Hurray!
--> END
+-> ending
+
+=== ending ===
+THE END
+-> ending
