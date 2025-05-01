@@ -109,6 +109,7 @@ public class DialogueManager : MonoBehaviour
             raycastLogic.StartDialogue(other.gameObject);
 
             endingObject = other.gameObject;
+            triggeredObject = null;
         }
         else if (other.CompareTag("CollisionDialogue"))
         {
@@ -171,6 +172,11 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            if (endingObject != null)
+            {
+                return;
+            }
+
             EndDialogue();
         }
     }
@@ -270,7 +276,7 @@ public class DialogueManager : MonoBehaviour
 
         FindObjectOfType<RaycastLogic>().SetJustFinishedDialogue();
 
-        if (triggeredObject != null)
+        if (triggeredObject != null && triggeredObject != endingObject)
         {
             triggeredObject.SetActive(false);
         }

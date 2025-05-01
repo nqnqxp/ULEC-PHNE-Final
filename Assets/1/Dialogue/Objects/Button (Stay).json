@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^Animals are thriving.","\n","^Hurray!","\n","end",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["^Animals are thriving.","\n","^Hurray!","\n",{"->":"ending"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"ending":["^THE END","\n",{"->":".^"},{"#f":1}],"#f":1}],"listDefs":{}}
