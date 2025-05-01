@@ -1811,6 +1811,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2837884865883710134, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837884865883710134, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 938f3b0065c513d4abd010950ecbb968, type: 3}
 --- !u!1 &317466784
