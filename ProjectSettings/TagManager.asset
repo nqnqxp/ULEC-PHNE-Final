@@ -9,6 +9,7 @@ TagManager:
   - Psychometry
   - Read
   - Blueprint
+  - CollisionDialogue
   - TriggerDialogue
   layers:
   - Default

@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^??: Hey!","\n","^??: Come here!","\n","^Player: <i>I wonder who that was...</i>","\n","ev",true,"/ev",{"VAR=":"hasTalked","re":true},"end",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev",false,{"VAR=":"hasTalked"},"/ev","end",null],"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["^??: Hey!","\n","^??: Over here!","\n","ev",true,"/ev",{"VAR=":"hasTalked","re":true},"end",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev",false,{"VAR=":"hasTalked"},"/ev","end",null],"#f":1}],"listDefs":{}}
