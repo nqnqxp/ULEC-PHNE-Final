@@ -19,9 +19,15 @@ public class CharacterSpriteManager : MonoBehaviour
     {
         instance = this;
 
-        characterSprite = GetComponent<SpriteRenderer>();
+        if (instance != null)
+        {
+            characterSprite = GetComponent<SpriteRenderer>();
+        }
 
-        mirrorX = characterSprite.transform.localScale.x;
+        if (characterSprite != null)
+        {
+            mirrorX = characterSprite.transform.localScale.x;
+        } 
     }
 
     private void Start()
