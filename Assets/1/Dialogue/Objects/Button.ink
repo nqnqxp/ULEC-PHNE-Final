@@ -12,23 +12,21 @@ VAR pressButton = false
 }
 
 === first ===
-FIN1X: <i>Should I press the button or not?</i>
+FIN1X: Final protocol engaged. Initiating pod access. 
+FIN1X: …
+FIN1X: No turning back now.
 
-FIN1X:
-* Press the button
+
+*Press the button-initiate sequence 
     -> button
-* Don't press the button
+*Do not press the button-abort sequence  
     -> no
     
 === button ===
-FIN1X: Yeah, this is the right choice.
-FIN1X: We need humans back.
 ~pressButton = true
 -> END
 
 === no ===
-FIN1X: No, the Earth is good as it is now.
-FIN1X: I shouldn't bring back the humans.
 ~pressButton = false
 ->END
 
@@ -40,14 +38,22 @@ FIN1X: I shouldn't bring back the humans.
 }
 
 === revive ===
-Scientist's came back. Another nuclear war occured.
+Cryo-pod access confirmed. 
+Biological stasis suspended.
+Subject revival initiated.
+Protocol complete.
 
-The End
+<i>The sky overhead is still blue. The soil is still warm. There is still time.</i>
+
+<i>But will the past repeat itself… or begin again?</i>
+
 -> END
 
 === stay ===
-Animals are thriving.
-Happy ever after.
+…
+….
+…..
 
-The End
+<i>FIN1X walks away, leaving behind the last remnants of a world that had its chance. The Earth breathes again, quiet and untamed. Life–not as it was, but as it is–flourishes without interruption. </i>
+
 -> END
