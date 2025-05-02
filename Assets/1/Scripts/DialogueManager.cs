@@ -28,8 +28,16 @@ public class DialogueManager : MonoBehaviour
     private AssignInk currentAssignInk;
     private RaycastLogic raycastLogic;
     private GameObject triggeredObject;
+    private GameObject endingObject;
 
     private int currentChoiceIndex = 0;
+
+    [Header("Ending")]
+    public GameObject reviveObject;
+    public GameObject stayObject;
+    public Canvas reviveCanvas;
+    public Canvas stayCanvas;
+    public GameObject buttonObject;
 
     private void Awake()
     {
@@ -96,6 +104,13 @@ public class DialogueManager : MonoBehaviour
 
             triggeredObject = other.gameObject;
         }
+        else if (other.CompareTag("EndingTrigger"))
+        {
+            raycastLogic.StartDialogue(other.gameObject);
+
+            endingObject = other.gameObject;
+            triggeredObject = null;
+        }
         else if (other.CompareTag("CollisionDialogue"))
         {
             raycastLogic.StartDialogue(other.gameObject);
@@ -118,8 +133,31 @@ public class DialogueManager : MonoBehaviour
             story.variablesState["staySilent"] = assignInk.staySilent;
         }
 
+        if (story.variablesState.GlobalVariableExistsWithName("pressButton") &&
+    story.variablesState.GlobalVariableExistsWithName("hasTalked"))
+        {
+            bool pressButton = (bool)story.variablesState["pressButton"];
+            bool hasTalked = (bool)story.variablesState["hasTalked"];
+
+            if (pressButton && hasTalked)
+            {
+                reviveCanvas.gameObject.SetActive(true);
+            }
+            else if (!pressButton && hasTalked) 
+            {
+                stayCanvas.gameObject.SetActive(true);
+            }
+            else
+            {
+                dialogueCanvas.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            dialogueCanvas.gameObject.SetActive(true);
+        }
+
         isDialoguePlaying = true;
-        dialogueCanvas.gameObject.SetActive(true);
         ContinueStory();
     }
 
@@ -134,6 +172,11 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            if (endingObject != null)
+            {
+                return;
+            }
+
             EndDialogue();
         }
     }
@@ -209,6 +252,20 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.gameObject.SetActive(false);
         blueprintCanvas.gameObject.SetActive(false);
 
+        if (story.variablesState["pressButton"] != null && story.variablesState["hasTalked"] != null) {
+            bool pressButton = (bool)story.variablesState["pressButton"];
+            bool hasTalked = (bool)story.variablesState["hasTalked"];
+
+            if (pressButton && hasTalked)
+            {
+                reviveObject.SetActive(true);
+            }
+            else if (hasTalked && !pressButton)
+            {
+                stayObject.SetActive(true);
+            }
+        }
+
         if (CharacterSpriteManager.instance != null)
         {
             CharacterSpriteManager.instance.ChangeSprite("idle");
@@ -219,9 +276,14 @@ public class DialogueManager : MonoBehaviour
 
         FindObjectOfType<RaycastLogic>().SetJustFinishedDialogue();
 
-        if (triggeredObject != null)
+        if (triggeredObject != null && triggeredObject != endingObject)
         {
             triggeredObject.SetActive(false);
+        }
+
+        if (buttonObject != null)
+        {
+            buttonObject.SetActive(false);
         }
     }
 }
