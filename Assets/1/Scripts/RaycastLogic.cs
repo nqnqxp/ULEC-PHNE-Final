@@ -65,7 +65,7 @@ public class RaycastLogic : MonoBehaviour
                 StartDialogue(currentTarget);
                 if (hit.collider.CompareTag("Blueprint"))
                 {
-                blueprintCanvas.gameObject.SetActive(true);
+                    blueprintCanvas.gameObject.SetActive(true);
                 }
             }
 
@@ -99,13 +99,13 @@ public class RaycastLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Children"))
+        {
+            Animator childrenAnimator = other.GetComponent<Animator>();
+            if (childrenAnimator != null)
             {
-                Animator childrenAnimator = other.GetComponent<Animator>();
-                if (childrenAnimator != null)
-                {
-                    childrenAnimator.SetBool("Near", true);
-                }
+                childrenAnimator.SetBool("Near", true);
             }
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -126,7 +126,7 @@ public class RaycastLogic : MonoBehaviour
         AssignInk inkTarget = target.GetComponent<AssignInk>();
 
         DialogueManager.instance.StartDialogue(inkTarget.inkJSON, inkTarget);
-        interactionCanvas.gameObject.SetActive(false );
+        interactionCanvas.gameObject.SetActive(false);
     }
     public void SetJustFinishedDialogue()
     {
