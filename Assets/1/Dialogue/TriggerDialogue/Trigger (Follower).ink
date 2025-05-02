@@ -33,11 +33,13 @@ FIN1X:
     -> right
 
 === wrong ===
+FIN1X: Move out of my way.
 #sprite: three
 ??: Ah! Please don't talk to me like that...
 -> choice
 
 === right ===
+FIN1X: I'm here to join you.
 #sprite: two
 ??: Ohh! How wonderful! New followers of our Shepherd are more than welcomed~~!!!  
 #sprite: one
