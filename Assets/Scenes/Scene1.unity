@@ -3078,7 +3078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactables:
-  - {fileID: 0}
+  - {fileID: 1962028244}
 --- !u!65 &487042366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13075,7 +13075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactables:
-  - {fileID: 1986632569}
+  - {fileID: 1986632571}
   - {fileID: 638782670}
 --- !u!65 &1871016687
 BoxCollider:
@@ -13467,12 +13467,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1986632567}
   - component: {fileID: 1986632568}
-  - component: {fileID: 1986632569}
   - component: {fileID: 1986632570}
   - component: {fileID: 1986632571}
   m_Layer: 3
   m_Name: scientist coat collider
-  m_TagString: Read
+  m_TagString: Observe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13545,21 +13544,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1986632569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986632566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de154ebc2610c9e47b4dff79c988f45e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 7024c17ddaaf2fe40b5bd904d591ae8a, type: 3}
-  hasTalked: 0
-  staySilent: 0
 --- !u!136 &1986632570
 CapsuleCollider:
   m_ObjectHideFlags: 0
