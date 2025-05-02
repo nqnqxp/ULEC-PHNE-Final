@@ -29,7 +29,6 @@ public class DialogueManager : MonoBehaviour
     private RaycastLogic raycastLogic;
     private GameObject triggeredObject;
     private GameObject endingObject;
-    private CharacterSpriteManager currentCharacterSpriteManager;
 
     private int currentChoiceIndex = 0;
 
@@ -39,7 +38,6 @@ public class DialogueManager : MonoBehaviour
     public Canvas reviveCanvas;
     public Canvas stayCanvas;
     public GameObject buttonObject;
-    public GameObject fogParticles;
 
     private void Awake()
     {
@@ -95,16 +93,6 @@ public class DialogueManager : MonoBehaviour
                     EndDialogue();
                 }
             }
-
-            if (story != null && story.variablesState != null && story.variablesState.GlobalVariableExistsWithName("pressButton"))
-            {
-                bool pressButton = (bool)story.variablesState["pressButton"];
-                if (pressButton && fogParticles != null && !fogParticles.activeSelf)
-                {
-                    fogParticles.SetActive(true);
-                }
-            }
-
         }
     }
 
@@ -133,11 +121,8 @@ public class DialogueManager : MonoBehaviour
     {
         currentInk = inkJSON;
         currentAssignInk = assignInk;
-        Debug.Log($"DialogueManager.StartDialogue called with AssignInk on: {assignInk.gameObject.name}");
 
-        currentCharacterSpriteManager = assignInk.GetComponent<CharacterSpriteManager>();
-
-            story = new Story(inkJSON.text);
+        story = new Story(inkJSON.text);
         if (story.variablesState.GlobalVariableExistsWithName("hasTalked"))
         {
             story.variablesState["hasTalked"] = assignInk.hasTalked;
@@ -184,15 +169,6 @@ public class DialogueManager : MonoBehaviour
 
             HandleTags(story.currentTags);
             DisplayLine(nextline);
-
-            if (story.variablesState != null && story.variablesState.GlobalVariableExistsWithName("pressButton"))
-            {
-                bool pressButton = (bool)story.variablesState["pressButton"];
-                if (pressButton && fogParticles != null)
-                {
-                    fogParticles.SetActive(true);
-                }
-            }
         }
         else
         {
@@ -214,10 +190,7 @@ public class DialogueManager : MonoBehaviour
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
-            if (currentCharacterSpriteManager != null)
-            {
-                currentCharacterSpriteManager.ChangeSprite(tagValue);
-            }
+          CharacterSpriteManager.instance.ChangeSprite(tagValue);
         }
     }
 
@@ -225,15 +198,6 @@ public class DialogueManager : MonoBehaviour
     {
         story.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
-
-        if (story.variablesState != null && story.variablesState.GlobalVariableExistsWithName("pressButton"))
-        {
-            bool pressButton = (bool)story.variablesState["pressButton"];
-            if (fogParticles != null && pressButton)
-            {
-                fogParticles.SetActive(true);
-            }
-        }
 
         while (story.canContinue)
         {
@@ -302,9 +266,9 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        if (currentCharacterSpriteManager != null)
+        if (CharacterSpriteManager.instance != null)
         {
-            currentCharacterSpriteManager.ChangeSprite("idle");
+            CharacterSpriteManager.instance.ChangeSprite("idle");
         }
 
         dialogueText.text = "";
@@ -321,9 +285,6 @@ public class DialogueManager : MonoBehaviour
         {
             buttonObject.SetActive(false);
         }
-
-        currentCharacterSpriteManager = null;
-        currentAssignInk = null;
     }
 }
 
