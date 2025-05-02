@@ -1340,7 +1340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157328865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.96, y: 0.03, z: -0.21999931}
+  m_LocalPosition: {x: 55.96, y: -0.501, z: -0.21999931}
   m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f94617bd5be19459eed0608ee310b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 21300000, guid: 61536cc25da3af34dacb7b603940d255, type: 3}
+  idleSprite: {fileID: 21300000, guid: 82e67e6d215259e458a85ecb0fcd0732, type: 3}
   oneSprite: {fileID: 21300000, guid: 31d5710ce8bfa9e4783d2f56d6e2d956, type: 3}
   twoSprite: {fileID: 21300000, guid: d43f07bb02334434fa303551c563cd79, type: 3}
   threeSprite: {fileID: 21300000, guid: 7dcd6957f8078764bb52b9f2c0cfe843, type: 3}
@@ -1418,12 +1418,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61536cc25da3af34dacb7b603940d255, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82e67e6d215259e458a85ecb0fcd0732, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.83, y: 4.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7009,7 +7009,7 @@ MonoBehaviour:
   oneSprite: {fileID: 21300000, guid: c025cfe0c15287a428db062e9c0b94f5, type: 3}
   twoSprite: {fileID: 21300000, guid: ab22e74fa458b9d42ab61d3372a823c6, type: 3}
   threeSprite: {fileID: 21300000, guid: 755e14da6a6d2f44b879d2c0eec49deb, type: 3}
-  fourSprite: {fileID: 21300000, guid: 483994ad71d3c254dbe9f6fc9bcdd5c1, type: 3}
+  fourSprite: {fileID: 21300000, guid: c6ff30e5d9dd29d4394dc5e0ddb4b557, type: 3}
   fiveSprite: {fileID: 0}
 --- !u!212 &693958669
 SpriteRenderer:
@@ -20825,7 +20825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977559770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 82.9, y: -0.432, z: 5.35}
+  m_LocalPosition: {x: 83.375, y: -0.432, z: 5.35}
   m_LocalScale: {x: 0.45999998, y: 0.45999998, z: 0.45999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
