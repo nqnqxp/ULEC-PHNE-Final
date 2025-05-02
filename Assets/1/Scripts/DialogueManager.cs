@@ -116,6 +116,10 @@ public class DialogueManager : MonoBehaviour
 
             triggeredObject = other.gameObject;
         }
+        else if (other.CompareTag("TriggerDialogueStay"))
+        {
+            raycastLogic.StartDialogue(other.gameObject);
+        }
         else if (other.CompareTag("EndingTrigger"))
         {
             raycastLogic.StartDialogue(other.gameObject);
