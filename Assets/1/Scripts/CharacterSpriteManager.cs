@@ -19,7 +19,12 @@ public class CharacterSpriteManager : MonoBehaviour
 
     private void Awake()
     {
-        characterSprite = GetComponent<SpriteRenderer>();
+        instance = this;
+
+        if (instance != null)
+        {
+            characterSprite = GetComponent<SpriteRenderer>();
+        }
 
         if (characterSprite != null)
         {
@@ -36,8 +41,6 @@ public class CharacterSpriteManager : MonoBehaviour
 
     public void ChangeSprite(string spriteName)
     {
-        if (characterSprite == null) return;
-
         switch (spriteName)
         {
             case "idle":
@@ -57,9 +60,6 @@ public class CharacterSpriteManager : MonoBehaviour
                 break;
             case "five":
                 characterSprite.sprite = fiveSprite;
-                break;
-            default:
-                Debug.LogWarning($"Sprite name '{spriteName}' not recognized on {gameObject.name}.");
                 break;
         }
     }

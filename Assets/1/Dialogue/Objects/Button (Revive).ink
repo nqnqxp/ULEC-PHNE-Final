@@ -1,6 +1,6 @@
-The sky overhead is still blue. The soil is still warm. There is still time. 
-But will the past repeat itself… or begin again?
+<i>The sky overhead is still blue. The soil is still warm. There is still time.</i>
 
+<i>But will the past repeat itself… or begin again?</i>
 -> ending
 
 === ending ===

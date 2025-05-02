@@ -10,25 +10,26 @@ VAR pressButton = false
 }
 
 === first ===
-FIN1X: <i>Final protocol engaged. Initiating pod access.</i>
+FIN1X: Final protocol engaged. Initiating pod access. 
+FIN1X: …
+FIN1X: No turning back now.
 
-FIN1X:
-* Press the button
+
+*Press the button
     -> button
-* Do not press the button
+*Do not press the button
     -> no
     
 === button ===
-~pressButton = true
 Initiating sequence.
+~pressButton = true
 Cryo-pod access confirmed. 
-Biological stasis suspended. 
-Subject revival initiated. 
+Biological stasis suspended.
+Subject revival initiated.
 Protocol complete.
 -> END
 
 === no ===
-Aborting sequence.
+Aborting sequence
 ~pressButton = false
-->END
-
+-> END
