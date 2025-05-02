@@ -6716,6 +6716,7 @@ GameObject:
   - component: {fileID: 693958667}
   - component: {fileID: 693958670}
   - component: {fileID: 693958671}
+  - component: {fileID: 693958672}
   m_Layer: 0
   m_Name: Follower 1 trigger
   m_TagString: TriggerDialogue
@@ -6731,7 +6732,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693958664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.31, y: 0.03999996, z: 0.62}
+  m_LocalPosition: {x: 4.3099976, y: 0.03999996, z: 0.62000084}
   m_LocalScale: {x: 0.45999998, y: 0.45999998, z: 0.45999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6846,6 +6847,20 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 11.59
+  m_Height: 5.34
+  m_Direction: 1
+  m_Center: {x: 6.35, y: 0, z: 0}
+--- !u!136 &693958672
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693958664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3.99
   m_Height: 5.34
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -9526,7 +9541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de154ebc2610c9e47b4dff79c988f45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 38cf6045348e94f3997e853b389201a0, type: 3}
+  inkJSON: {fileID: 4900000, guid: 714455244cbb24521b9fdea83569c671, type: 3}
   hasTalked: 0
   staySilent: 0
 --- !u!136 &920170201
@@ -10305,8 +10320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f94617bd5be19459eed0608ee310b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 21300000, guid: 28d4240f5dcc65d428b0eb4d63ba48ce, type: 3}
-  oneSprite: {fileID: 21300000, guid: cc41ded27af623a41ae04f40780f3363, type: 3}
+  idleSprite: {fileID: 21300000, guid: 632bbd43780e34b52a2eb2296259d69a, type: 3}
+  oneSprite: {fileID: 21300000, guid: 25eb017ebe57844ac9568903df33add8, type: 3}
   twoSprite: {fileID: 21300000, guid: f508533e142e92a4494871d38bd8121c, type: 3}
   threeSprite: {fileID: 21300000, guid: 09d768f80871784478f288bd23d1927f, type: 3}
   fourSprite: {fileID: 21300000, guid: 0693a6638259cc24692e8ea4e8278e29, type: 3}
@@ -10352,12 +10367,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 28d4240f5dcc65d428b0eb4d63ba48ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 632bbd43780e34b52a2eb2296259d69a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.4, y: 3.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11126,7 +11141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de154ebc2610c9e47b4dff79c988f45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 714455244cbb24521b9fdea83569c671, type: 3}
+  inkJSON: {fileID: 4900000, guid: 724192ac4fcb1449bb535a4068f65e9d, type: 3}
   hasTalked: 0
   staySilent: 0
 --- !u!136 &1070797865
@@ -17861,8 +17876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f94617bd5be19459eed0608ee310b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 21300000, guid: b6a2193a049d27b46b6c39001971d9fd, type: 3}
-  oneSprite: {fileID: 21300000, guid: 1ad12f7c9b889084d99d59e44a03bb5c, type: 3}
+  idleSprite: {fileID: 21300000, guid: adeb320b2663140849e3879eac7bea02, type: 3}
+  oneSprite: {fileID: 21300000, guid: 662d3bb81990e40e292e4f90749b908d, type: 3}
   twoSprite: {fileID: 21300000, guid: 084574e8790bc53478e5da0da61eb921, type: 3}
   threeSprite: {fileID: 21300000, guid: 804c6ee0e910dbd4ebbd6df4fd7ca3ba, type: 3}
   fourSprite: {fileID: 21300000, guid: ea2ccfd09c9d0cb4897a2a34670d9111, type: 3}
@@ -17916,7 +17931,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1704540468 stripped
