@@ -4,5 +4,5 @@
 -> ending
 
 === ending ===
-THE END
+END
 -> ending
